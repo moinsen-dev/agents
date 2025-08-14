@@ -10,6 +10,8 @@ A comprehensive collection of specialized AI agents designed to accelerate and e
    ```
 
 2. **Copy to your Claude Code agents directory:**
+
+   **!Important:** You must copy files **exclude** the README.md, or any other files except the subagents file in the future.
    ```bash
    cp -r agents/* ~/.claude/agents/
    rm ~/.claude/agents/README.md
@@ -24,7 +26,7 @@ A comprehensive collection of specialized AI agents designed to accelerate and e
    
    Or manually copy all the agent files to your `~/.claude/agents/` directory.
 
-3. **Restart Claude Code** to load the new agents.
+4. **Restart Claude Code** to load the new agents.
 
 ## 🚀 Quick Start
 
