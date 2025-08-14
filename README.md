@@ -12,6 +12,14 @@ A comprehensive collection of specialized AI agents designed to accelerate and e
 2. **Copy to your Claude Code agents directory:**
    ```bash
    cp -r agents/* ~/.claude/agents/
+   rm ~/.claude/agents/README.md
+   ```
+
+   Or
+
+   ```bash
+   mkdir ~/.claude/agents/
+   rsync -a --exclude='README.md' . ~/.claude/agents/
    ```
    
    Or manually copy all the agent files to your `~/.claude/agents/` directory.
