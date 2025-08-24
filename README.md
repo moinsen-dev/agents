@@ -2,11 +2,40 @@
 
 A comprehensive collection of specialized AI agents designed to accelerate and enhance every aspect of rapid development. Each agent is an expert in their domain, ready to be invoked when their expertise is needed.
 
+> **Note:** This is a fork of the original [contains-studio/agents](https://github.com/contains-studio/agents) repository, enhanced with an upcoming npm tool for easy installation and management.
+
 ## 📥 Installation
+
+### 🚀 **Easy Installation (Recommended - Coming Soon)**
+
+Install agents effortlessly with our upcoming npm tool:
+
+```bash
+# Install all agents
+npx claude-agents
+
+# Install specific departments
+npx claude-agents --department marketing,engineering
+
+# Install as commands instead of agents
+npx claude-agents --as-commands
+
+# Install with Claude Opus model
+npx claude-agents --model opus --assign-colors
+```
+
+**Benefits of the npm tool:**
+- ✅ Always up-to-date agents from GitHub
+- ✅ Interactive selection by department or individual agents
+- ✅ Automatic color assignment and model configuration
+- ✅ Support for both agents and commands format
+- ✅ No manual file management required
+
+### 📁 **Manual Installation**
 
 1. **Download this repository:**
    ```bash
-   git clone https://github.com/contains-studio/agents.git
+   git clone https://github.com/your-username/agents.git
    ```
 
 2. **Copy to your Claude Code agents directory:**
@@ -26,7 +55,7 @@ A comprehensive collection of specialized AI agents designed to accelerate and e
    
    Or manually copy all the agent files to your `~/.claude/agents/` directory.
 
-4. **Restart Claude Code** to load the new agents.
+3. **Restart Claude Code** to load the new agents.
 
 ## 🚀 Quick Start
 
@@ -299,6 +328,42 @@ Modify these elements for your needs:
 - [ ] Update department structure if needed
 - [ ] Customize agent colors for your brand
 
+## 🆕 Enhanced Features (This Fork)
+
+This fork introduces several enhancements to make agent management easier:
+
+### 🔧 **NPM Installation Tool**
+- **Dynamic GitHub Integration**: Always fetch the latest agents directly from repositories
+- **Interactive CLI**: User-friendly prompts for selecting agents by department or individually
+- **Multiple Installation Modes**: Support for global, project-specific, or custom paths
+- **Repository Flexibility**: Support for multiple agent repositories, including private ones
+
+### ⚡ **Advanced Features**
+- **Model Configuration**: Automatically configure Claude model (Opus/Sonnet) for all agents
+- **Color Assignment**: Auto-assign colors to agents for better organization
+- **Commands Format**: Convert agents to simplified command format for different workflows
+- **Smart Caching**: Reduce GitHub API calls with intelligent caching system
+- **Offline Support**: Work with cached data when network is unavailable
+
+### 🎯 **Installation Options**
+```bash
+# Install all agents with Opus model and colors
+npx claude-agents --model opus --assign-colors
+
+# Install marketing and engineering agents as commands
+npx claude-agents --departments marketing,engineering --as-commands
+
+# Interactive selection with preview
+npx claude-agents
+```
+
+### 🚀 **Coming Soon**
+The `claude-agents` npm tool is currently in development. It will provide:
+- Automated releases via GitHub Actions
+- Support for custom repositories
+- Update notifications and management
+- Migration tools from manual installations
+
 ## 🤝 Contributing
 
 To improve existing agents or suggest new ones:
@@ -306,3 +371,6 @@ To improve existing agents or suggest new ones:
 2. Test thoroughly with real projects
 3. Document performance improvements
 4. Share successful patterns with the community
+
+### 💡 **Contributing to the NPM Tool**
+The npm tool development is tracked in our [project plan](Plan-Claude-Agent-Npm-Tool.md). Contributions welcome!
