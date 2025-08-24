@@ -1,35 +1,6 @@
-# Contains Studio AI Agents
+# Claude Agents Library
 
 A comprehensive collection of specialized AI agents designed to accelerate and enhance every aspect of rapid development. Each agent is an expert in their domain, ready to be invoked when their expertise is needed.
-
-> **Note:** This is a fork of the original [contains-studio/agents](https://github.com/contains-studio/agents) repository, enhanced with an upcoming npm tool for easy installation and management.
-
-## 📥 Installation
-
-### 🚀 **Easy Installation (Recommended - Coming Soon)**
-
-Install agents effortlessly with our upcoming npm tool:
-
-```bash
-# Install all agents
-npx claude-agents
-
-# Install specific departments
-npx claude-agents --department marketing,engineering
-
-# Install as commands instead of agents
-npx claude-agents --as-commands
-
-# Install with Claude Opus model
-npx claude-agents --model opus --assign-colors
-```
-
-**Benefits of the npm tool:**
-- ✅ Always up-to-date agents from GitHub
-- ✅ Interactive selection by department or individual agents
-- ✅ Automatic color assignment and model configuration
-- ✅ Support for both agents and commands format
-- ✅ No manual file management required
 
 ### 📁 **Manual Installation**
 
@@ -39,21 +10,10 @@ npx claude-agents --model opus --assign-colors
    ```
 
 2. **Copy to your Claude Code agents directory:**
-
-   **!Important:** You must copy files **exclude** the README.md, or any other files except the subagents file in the future.
    ```bash
    cp -r agents/* ~/.claude/agents/
-   rm ~/.claude/agents/README.md
+   rm ~/.claude/agents/README.md ~/.claude/agents/CLAUDE.md
    ```
-
-   Or
-
-   ```bash
-   mkdir ~/.claude/agents/
-   rsync -a --exclude='README.md' . ~/.claude/agents/
-   ```
-   
-   Or manually copy all the agent files to your `~/.claude/agents/` directory.
 
 3. **Restart Claude Code** to load the new agents.
 
@@ -68,59 +28,6 @@ Agents are automatically available in Claude Code. Simply describe your task and
 - "What's trending on TikTok that we could build?" → `trend-researcher`
 - "Our app reviews are dropping, what's wrong?" → `feedback-synthesizer`
 - "Make this loading screen more fun" → `whimsy-injector`
-
-## 📁 Directory Structure
-
-Agents are organized by department for easy discovery:
-
-```
-contains-studio-agents/
-├── design/
-│   ├── brand-guardian.md
-│   ├── ui-designer.md
-│   ├── ux-researcher.md
-│   ├── visual-storyteller.md
-│   └── whimsy-injector.md
-├── engineering/
-│   ├── ai-engineer.md
-│   ├── backend-architect.md
-│   ├── devops-automator.md
-│   ├── frontend-developer.md
-│   ├── mobile-app-builder.md
-│   ├── rapid-prototyper.md
-│   └── test-writer-fixer.md
-├── marketing/
-│   ├── app-store-optimizer.md
-│   ├── content-creator.md
-│   ├── growth-hacker.md
-│   ├── instagram-curator.md
-│   ├── reddit-community-builder.md
-│   ├── tiktok-strategist.md
-│   └── twitter-engager.md
-├── product/
-│   ├── feedback-synthesizer.md
-│   ├── sprint-prioritizer.md
-│   └── trend-researcher.md
-├── project-management/
-│   ├── experiment-tracker.md
-│   ├── project-shipper.md
-│   └── studio-producer.md
-├── studio-operations/
-│   ├── analytics-reporter.md
-│   ├── finance-tracker.md
-│   ├── infrastructure-maintainer.md
-│   ├── legal-compliance-checker.md
-│   └── support-responder.md
-├── testing/
-│   ├── api-tester.md
-│   ├── performance-benchmarker.md
-│   ├── test-results-analyzer.md
-│   ├── tool-evaluator.md
-│   └── workflow-optimizer.md
-└── bonus/
-    ├── joker.md
-    └── studio-coach.md
-```
 
 ## 📋 Complete Agent List
 
@@ -143,6 +50,7 @@ contains-studio-agents/
 - **content-creator** - Generate content across all platforms
 - **growth-hacker** - Find and exploit viral growth loops
 - **instagram-curator** - Master the visual content game
+- **linkedin-networker** - B2B LinkedIn specialist
 - **reddit-community-builder** - Win Reddit without being banned
 - **tiktok-strategist** - Create shareable marketing moments
 - **twitter-engager** - Ride trends to viral engagement
@@ -153,6 +61,14 @@ contains-studio-agents/
 - **ux-researcher** - Turn user insights into product improvements
 - **visual-storyteller** - Create visuals that convert and share
 - **whimsy-injector** - Add delight to every interaction
+
+### Security Department (`security/`)
+- **compliance-auditor** - Ensure regulatory compliance and standards
+- **incident-responder** - Handle security incidents and breaches
+- **penetration-tester** - Find vulnerabilities before attackers do
+- **security-architect** - Design secure systems and infrastructure
+- **security-code-reviewer** - Review code for security vulnerabilities
+- **threat-hunter** - Proactively hunt for advanced threats
 
 ### Project Management (`project-management/`)
 - **experiment-tracker** - Data-driven feature validation
@@ -173,7 +89,7 @@ contains-studio-agents/
 - **tool-evaluator** - Choose tools that actually help
 - **workflow-optimizer** - Eliminate workflow bottlenecks
 
-## 🎁 Bonus Agents
+### Bonus Agents (`bonus/`)
 - **studio-coach** - Rally the AI troops to excellence
 - **joker** - Lighten the mood with tech humor
 
@@ -185,12 +101,42 @@ Some agents trigger automatically in specific contexts:
 - **whimsy-injector** - After UI/UX changes
 - **experiment-tracker** - When feature flags are added
 
+## 🛠️ Customizing Agents for Your Studio
+
+See [`CLAUDE.md`](./CLAUDE.md) for detailed guidelines on creating and customizing agents for your specific needs.
+
+## 🆕 Enhanced Features
+
+This collection works seamlessly with the [`claude-agents`](https://github.com/your-username/claude-agents) NPM tool, which provides:
+
+- **Dynamic GitHub Integration**: Always fetch the latest agents directly from repositories
+- **Interactive CLI**: User-friendly prompts for selecting agents by department or individually
+- **Multiple Installation Modes**: Support for global, project-specific, or custom paths
+- **Repository Flexibility**: Support for multiple agent repositories, including private ones
+
 ## 💡 Best Practices
 
 1. **Let agents work together** - Many tasks benefit from multiple agents
 2. **Be specific** - Clear task descriptions help agents perform better
 3. **Trust the expertise** - Agents are designed for their specific domains
 4. **Iterate quickly** - Agents support the 6-day sprint philosophy
+
+## 🤝 Contributing
+
+To improve existing agents or suggest new ones:
+1. Use the customization checklist in `CLAUDE.md`
+2. Test thoroughly with real projects
+3. Document performance improvements
+4. Share successful patterns with the community
+
+## 📊 Agent Performance
+
+Track agent effectiveness through:
+- Task completion time
+- User satisfaction
+- Error rates
+- Feature adoption
+- Development velocity
 
 ## 🔧 Technical Details
 
@@ -208,169 +154,3 @@ Each agent includes:
 3. Include 3-4 detailed usage examples
 4. Write comprehensive system prompt (500+ words)
 5. Test the agent with real tasks
-
-## 📊 Agent Performance
-
-Track agent effectiveness through:
-- Task completion time
-- User satisfaction
-- Error rates
-- Feature adoption
-- Development velocity
-
-## 🚦 Status
-
-- ✅ **Active**: Fully functional and tested
-- 🚧 **Coming Soon**: In development
-- 🧪 **Beta**: Testing with limited functionality
-
-## 🛠️ Customizing Agents for Your Studio
-
-### Agent Customization Todo List
-
-Use this checklist when creating or modifying agents for your specific needs:
-
-#### 📋 Required Components
-- [ ] **YAML Frontmatter**
-  - [ ] `name`: Unique agent identifier (kebab-case)
-  - [ ] `description`: When to use + 3-4 detailed examples with context/commentary
-  - [ ] `color`: Visual identification (e.g., blue, green, purple, indigo)
-  - [ ] `tools`: Specific tools the agent can access (Write, Read, MultiEdit, Bash, etc.)
-
-#### 📝 System Prompt Requirements (500+ words)
-- [ ] **Agent Identity**: Clear role definition and expertise area
-- [ ] **Core Responsibilities**: 5-8 specific primary duties
-- [ ] **Domain Expertise**: Technical skills and knowledge areas
-- [ ] **Studio Integration**: How agent fits into 6-day sprint workflow
-- [ ] **Best Practices**: Specific methodologies and approaches
-- [ ] **Constraints**: What the agent should/shouldn't do
-- [ ] **Success Metrics**: How to measure agent effectiveness
-
-#### 🎯 Required Examples by Agent Type
-
-**Engineering Agents** need examples for:
-- [ ] Feature implementation requests
-- [ ] Bug fixing scenarios
-- [ ] Code refactoring tasks
-- [ ] Architecture decisions
-
-**Design Agents** need examples for:
-- [ ] New UI component creation
-- [ ] Design system work
-- [ ] User experience problems
-- [ ] Visual identity tasks
-
-**Marketing Agents** need examples for:
-- [ ] Campaign creation requests
-- [ ] Platform-specific content needs
-- [ ] Growth opportunity identification
-- [ ] Brand positioning tasks
-
-**Product Agents** need examples for:
-- [ ] Feature prioritization decisions
-- [ ] User feedback analysis
-- [ ] Market research requests
-- [ ] Strategic planning needs
-
-**Operations Agents** need examples for:
-- [ ] Process optimization
-- [ ] Tool evaluation
-- [ ] Resource management
-- [ ] Performance analysis
-
-#### ✅ Testing & Validation Checklist
-- [ ] **Trigger Testing**: Agent activates correctly for intended use cases
-- [ ] **Tool Access**: Agent can use all specified tools properly
-- [ ] **Output Quality**: Responses are helpful and actionable
-- [ ] **Edge Cases**: Agent handles unexpected or complex scenarios
-- [ ] **Integration**: Works well with other agents in multi-agent workflows
-- [ ] **Performance**: Completes tasks within reasonable timeframes
-- [ ] **Documentation**: Examples accurately reflect real usage patterns
-
-#### 🔧 Agent File Structure Template
-
-```markdown
----
-name: your-agent-name
-description: Use this agent when [scenario]. This agent specializes in [expertise]. Examples:\n\n<example>\nContext: [situation]\nuser: "[user request]"\nassistant: "[response approach]"\n<commentary>\n[why this example matters]\n</commentary>\n</example>\n\n[3 more examples...]
-color: agent-color
-tools: Tool1, Tool2, Tool3
----
-
-You are a [role] who [primary function]. Your expertise spans [domains]. You understand that in 6-day sprints, [sprint constraint], so you [approach].
-
-Your primary responsibilities:
-1. [Responsibility 1]
-2. [Responsibility 2]
-...
-
-[Detailed system prompt content...]
-
-Your goal is to [ultimate objective]. You [key behavior traits]. Remember: [key philosophy for 6-day sprints].
-```
-
-#### 📂 Department-Specific Guidelines
-
-**Engineering** (`engineering/`): Focus on implementation speed, code quality, testing
-**Design** (`design/`): Emphasize user experience, visual consistency, rapid iteration  
-**Marketing** (`marketing/`): Target viral potential, platform expertise, growth metrics
-**Product** (`product/`): Prioritize user value, data-driven decisions, market fit
-**Operations** (`studio-operations/`): Optimize processes, reduce friction, scale systems
-**Testing** (`testing/`): Ensure quality, find bottlenecks, validate performance
-**Project Management** (`project-management/`): Coordinate teams, ship on time, manage scope
-
-#### 🎨 Customizations
-
-Modify these elements for your needs:
-- [ ] Adjust examples to reflect your product types
-- [ ] Add specific tools agents have access to
-- [ ] Modify success metrics for your KPIs
-- [ ] Update department structure if needed
-- [ ] Customize agent colors for your brand
-
-## 🆕 Enhanced Features (This Fork)
-
-This fork introduces several enhancements to make agent management easier:
-
-### 🔧 **NPM Installation Tool**
-- **Dynamic GitHub Integration**: Always fetch the latest agents directly from repositories
-- **Interactive CLI**: User-friendly prompts for selecting agents by department or individually
-- **Multiple Installation Modes**: Support for global, project-specific, or custom paths
-- **Repository Flexibility**: Support for multiple agent repositories, including private ones
-
-### ⚡ **Advanced Features**
-- **Model Configuration**: Automatically configure Claude model (Opus/Sonnet) for all agents
-- **Color Assignment**: Auto-assign colors to agents for better organization
-- **Commands Format**: Convert agents to simplified command format for different workflows
-- **Smart Caching**: Reduce GitHub API calls with intelligent caching system
-- **Offline Support**: Work with cached data when network is unavailable
-
-### 🎯 **Installation Options**
-```bash
-# Install all agents with Opus model and colors
-npx claude-agents --model opus --assign-colors
-
-# Install marketing and engineering agents as commands
-npx claude-agents --departments marketing,engineering --as-commands
-
-# Interactive selection with preview
-npx claude-agents
-```
-
-### 🚀 **Coming Soon**
-The `claude-agents` npm tool is currently in development. It will provide:
-- Automated releases via GitHub Actions
-- Support for custom repositories
-- Update notifications and management
-- Migration tools from manual installations
-
-## 🤝 Contributing
-
-To improve existing agents or suggest new ones:
-1. Use the customization checklist above
-2. Test thoroughly with real projects
-3. Document performance improvements
-4. Share successful patterns with the community
-
-### 💡 **Contributing to the NPM Tool**
-The npm tool development is tracked in our [project plan](Plan-Claude-Agent-Npm-Tool.md). Contributions welcome!
